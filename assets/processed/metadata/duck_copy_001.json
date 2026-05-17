@@ -1,0 +1,13 @@
+{
+  "id": "duck_copy_001",
+  "displayName": "Duck Copy",
+  "category": "body",
+  "model": "avatars/bodies/duck_copy_001.glb",
+  "thumbnail": "thumbnails/duck_copy_001.png",
+  "supportsColor": false,
+  "defaultColor": null,
+  "compatibleBodyTypes": [],
+  "compatibleSkeleton": null,
+  "tags": [],
+  "version": 1
+}

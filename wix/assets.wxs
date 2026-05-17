@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Fragment>
+        <DirectoryRef Id="ProcessedDir">
+            <Directory Id="dir684416167500897F0659C44F8A90560D" Name="animations">
+                <Component Id="cmpD66515D0DF8371E21CAFF0144CA4782D" Guid="{12FF1843-14F8-4744-9347-8FA212331D58}">
+                    <File Id="fil6E80E383DADD8FC1F1999ABA0C4D2532" KeyPath="yes" Source="$(var.AssetsProcessedDir)\animations\.gitkeep" />
+                </Component>
+            </Directory>
+            <Directory Id="dirD7A729E3C0ADDD865AEC945A88DB1334" Name="avatars">
+                <Directory Id="dirDB7B13A015BC77AEA2E96C9381BFFBA0" Name="accessories">
+                    <Component Id="cmp3A5B6A767442D998FD2BF0A18BBCBA04" Guid="{3C7D8C4F-1DFB-44B7-8C74-C517CA57CECE}">
+                        <File Id="filEE67A2FFFCB0FB8E58AD6DAFCEF12262" KeyPath="yes" Source="$(var.AssetsProcessedDir)\avatars\accessories\.gitkeep" />
+                    </Component>
+                </Directory>
+                <Directory Id="dirCB2008B1991249F0F2207823C39B2625" Name="bodies">
+                    <Component Id="cmp370B8378EF09E3E158B1107023855177" Guid="{621EBFE0-7E43-449E-96FB-69DE53DB4CD8}">
+                        <File Id="filA284E5746E2571F2C457B8B5E5E95F3A" KeyPath="yes" Source="$(var.AssetsProcessedDir)\avatars\bodies\.gitkeep" />
+                    </Component>
+                    <Component Id="cmpDD0F3AC52B06C32F8E01DF7A1B508653" Guid="{CB34A222-9D16-4354-A250-397E76441961}">
+                        <File Id="fil5ED0E9D6C16CD9136210A3540891E52D" KeyPath="yes" Source="$(var.AssetsProcessedDir)\avatars\bodies\duck.glb" />
+                    </Component>
+                    <Component Id="cmp914EA88615447730E252A729779D0111" Guid="{37C00BC5-3601-4402-92D2-C77AC68D9127}">
+                        <File Id="fil0D66C7AAD377624F7FC9A6DAFA141E74" KeyPath="yes" Source="$(var.AssetsProcessedDir)\avatars\bodies\duck_copy_001.glb" />
+                    </Component>
+                    <Component Id="cmp8D477E19D946A2B3E3D085059DB0E840" Guid="{36CD3DF9-9FAB-4C51-9224-F7E6E6982249}">
+                        <File Id="fil9787CFC2D5C2DE2F3FDCB9D24DB012DF" KeyPath="yes" Source="$(var.AssetsProcessedDir)\avatars\bodies\phase4_rig.glb" />
+                    </Component>
+                </Directory>
+                <Directory Id="dirA8F9DBC5B310E8FEE5925BEDA07E2E54" Name="bottoms">
+                    <Component Id="cmp5ACCF6C3A228CC96BD7F7F8DFF61E08A" Guid="{6F602728-EF71-431D-A728-647DEFB61B8D}">
+                        <File Id="filF5D59E28B94A9622F5CB3BA8B12D1C1A" KeyPath="yes" Source="$(var.AssetsProcessedDir)\avatars\bottoms\.gitkeep" />
+                    </Component>
+                </Directory>
+                <Directory Id="dir4B5FEDFC97D7CCEF100CCA4BA4E8479C" Name="hair">
+                    <Component Id="cmp997227D08B187782EBB5DEBF55FC610E" Guid="{5882FEA2-DC80-48B6-803D-85A1F97376FA}">
+                        <File Id="filA87D5B21C79882416EEBA5142DFCE31B" KeyPath="yes" Source="$(var.AssetsProcessedDir)\avatars\hair\.gitkeep" />
+                    </Component>
+                </Directory>
+                <Directory Id="dir164E873752AACEA5573135A2DF49EF1F" Name="shoes">
+                    <Component Id="cmp57D79CB7A84E600C3CE2427DA5874E81" Guid="{3C2C64F0-B07F-43C2-B528-AE1C69853393}">
+                        <File Id="filFDDDD82603EB2FA93AF559AD6698C7F6" KeyPath="yes" Source="$(var.AssetsProcessedDir)\avatars\shoes\.gitkeep" />
+                    </Component>
+                </Directory>
+                <Directory Id="dir71A10EA12BF5FACD806977D7A4DFD9AD" Name="tops">
+                    <Component Id="cmpB35FDB19F0B709069BBAD1D1A7FC0908" Guid="{573EE804-00B2-4FB7-884A-19426D61BAE0}">
+                        <File Id="fil4A65807B2B7042AE87719F013DE137BF" KeyPath="yes" Source="$(var.AssetsProcessedDir)\avatars\tops\.gitkeep" />
+                    </Component>
+                    <Component Id="cmp74C837029D916FB705467352181951B8" Guid="{AAEB64D3-4A92-4428-B739-FFDFEFD340F6}">
+                        <File Id="fil1A2A32F7739340BAB6BE3A6DB86CD7EA" KeyPath="yes" Source="$(var.AssetsProcessedDir)\avatars\tops\phase7_top.glb" />
+                    </Component>
+                </Directory>
+            </Directory>
+            <Directory Id="dir194A34924E5DB79CF380CA439BF969C4" Name="metadata">
+                <Component Id="cmpDB587CE9B7EB8C6653729A498CF30504" Guid="{01861BC7-9A0A-44E4-893F-AC0C23E3F541}">
+                    <File Id="filA8E5A3CC3A6BC0796369CA3D4117124B" KeyPath="yes" Source="$(var.AssetsProcessedDir)\metadata\.gitkeep" />
+                </Component>
+                <Component Id="cmp67571781DB445FA13EF067B04D4F1A22" Guid="{E2641F0B-A338-4A1B-9A79-FCDAB6C493DC}">
+                    <File Id="fil8E5A10836BB2F00F57F2F8B20BAF36AD" KeyPath="yes" Source="$(var.AssetsProcessedDir)\metadata\duck.json" />
+                </Component>
+                <Component Id="cmp449B691C1F65CC62BEDCF2D05017EAC9" Guid="{73ADF5AC-F3EA-4C05-B6C4-9108BE97AE5E}">
+                    <File Id="filEB82066E5A513ECCF7592301D91E9C04" KeyPath="yes" Source="$(var.AssetsProcessedDir)\metadata\duck_copy_001.json" />
+                </Component>
+                <Component Id="cmpAB7EF15253B774CDBCB6D1B79F5E581A" Guid="{F98D73BA-BB32-41A6-825D-053B5B5F6A15}">
+                    <File Id="filC6046361E221F3F67C30B7F8EA14345F" KeyPath="yes" Source="$(var.AssetsProcessedDir)\metadata\phase4_rig.json" />
+                </Component>
+                <Component Id="cmpB9756E7F1A51B9446A845779CCC027B1" Guid="{CD041ABC-367B-456E-A946-DE67EB2C038C}">
+                    <File Id="filEB2D3D584020C7441DBEB65B743DBD70" KeyPath="yes" Source="$(var.AssetsProcessedDir)\metadata\phase7_top.json" />
+                </Component>
+            </Directory>
+            <Directory Id="dirBFB1FF65961464D2805365F7572C3C98" Name="thumbnails">
+                <Component Id="cmp0CF2D530675FD476DAED821A25827CBC" Guid="{D19BEB8B-49AB-40A5-9451-EF364C4697FC}">
+                    <File Id="fil62D793627962EBF133F7377E260DA7EF" KeyPath="yes" Source="$(var.AssetsProcessedDir)\thumbnails\.gitkeep" />
+                </Component>
+                <Component Id="cmpEBA8FE411EA5CF039E7CFB63A3C9534E" Guid="{27B05FA9-975F-4918-9363-4F13DA1D8B90}">
+                    <File Id="fil93C6186623958BB7B200BC814A8FCEDE" KeyPath="yes" Source="$(var.AssetsProcessedDir)\thumbnails\body_duck_001.png" />
+                </Component>
+                <Component Id="cmp123E1AE90AB5485EE7CDDA465502ADDE" Guid="{FCBA626B-AAE6-42C9-BB30-644622FD8A36}">
+                    <File Id="fil5F6F937E23C8E87841569BE9BE2A519C" KeyPath="yes" Source="$(var.AssetsProcessedDir)\thumbnails\body_phase4_rig_001.png" />
+                </Component>
+                <Component Id="cmp00637804E0EF459579A7E6484C9D8040" Guid="{F76D3055-9A5E-48E7-A120-4196D0CFF7F9}">
+                    <File Id="fil1D52BB9E4417DE31BA779B5CBDD654DA" KeyPath="yes" Source="$(var.AssetsProcessedDir)\thumbnails\duck_copy_001.png" />
+                </Component>
+                <Component Id="cmp18791F606CDD95BFA32638DF4612C763" Guid="{B014C6AF-2A23-4D51-84FB-ED87380B89A1}">
+                    <File Id="fil4AEA611DDF53F3B6FD1CAE202C32BB4B" KeyPath="yes" Source="$(var.AssetsProcessedDir)\thumbnails\top_phase7_basic_001.png" />
+                </Component>
+            </Directory>
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <ComponentGroup Id="HarvestedAssets">
+            <ComponentRef Id="cmpD66515D0DF8371E21CAFF0144CA4782D" />
+            <ComponentRef Id="cmp3A5B6A767442D998FD2BF0A18BBCBA04" />
+            <ComponentRef Id="cmp370B8378EF09E3E158B1107023855177" />
+            <ComponentRef Id="cmpDD0F3AC52B06C32F8E01DF7A1B508653" />
+            <ComponentRef Id="cmp914EA88615447730E252A729779D0111" />
+            <ComponentRef Id="cmp8D477E19D946A2B3E3D085059DB0E840" />
+            <ComponentRef Id="cmp5ACCF6C3A228CC96BD7F7F8DFF61E08A" />
+            <ComponentRef Id="cmp997227D08B187782EBB5DEBF55FC610E" />
+            <ComponentRef Id="cmp57D79CB7A84E600C3CE2427DA5874E81" />
+            <ComponentRef Id="cmpB35FDB19F0B709069BBAD1D1A7FC0908" />
+            <ComponentRef Id="cmp74C837029D916FB705467352181951B8" />
+            <ComponentRef Id="cmpDB587CE9B7EB8C6653729A498CF30504" />
+            <ComponentRef Id="cmp67571781DB445FA13EF067B04D4F1A22" />
+            <ComponentRef Id="cmp449B691C1F65CC62BEDCF2D05017EAC9" />
+            <ComponentRef Id="cmpAB7EF15253B774CDBCB6D1B79F5E581A" />
+            <ComponentRef Id="cmpB9756E7F1A51B9446A845779CCC027B1" />
+            <ComponentRef Id="cmp0CF2D530675FD476DAED821A25827CBC" />
+            <ComponentRef Id="cmpEBA8FE411EA5CF039E7CFB63A3C9534E" />
+            <ComponentRef Id="cmp123E1AE90AB5485EE7CDDA465502ADDE" />
+            <ComponentRef Id="cmp00637804E0EF459579A7E6484C9D8040" />
+            <ComponentRef Id="cmp18791F606CDD95BFA32638DF4612C763" />
+        </ComponentGroup>
+    </Fragment>
+</Wix>

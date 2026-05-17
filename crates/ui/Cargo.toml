@@ -1,0 +1,18 @@
+[package]
+name = "ui"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+publish.workspace = true
+
+[dependencies]
+assets  = { workspace = true }
+avatar  = { workspace = true }
+scene   = { workspace = true }
+egui    = { workspace = true }
+egui_extras = { workspace = true }
+egui-phosphor = { workspace = true }
+serde   = { workspace = true }
+tracing = { workspace = true }
+glam    = { workspace = true }

@@ -1,0 +1,23 @@
+{
+  "id": "shoes_phase17_basic_001",
+  "displayName": "Phase 17 Shoes",
+  "category": "shoes",
+  "model": "avatars/shoes/shoes_phase17_basic_001.glb",
+  "thumbnail": "thumbnails/shoes_phase17_basic_001.png",
+  "supportsColor": true,
+  "defaultColor": [
+    0.08,
+    0.08,
+    0.1
+  ],
+  "compatibleBodyTypes": [
+    "body_phase4_rig_001"
+  ],
+  "compatibleSkeleton": "avatar_skeleton_v1",
+  "tags": [
+    "sample",
+    "phase17",
+    "shoes"
+  ],
+  "version": 1
+}

@@ -1,0 +1,23 @@
+{
+  "id": "hat_phase17_basic_001",
+  "displayName": "Phase 17 Hat",
+  "category": "hat",
+  "model": "avatars/hats/hat_phase17_basic_001.glb",
+  "thumbnail": "thumbnails/hat_phase17_basic_001.png",
+  "supportsColor": true,
+  "defaultColor": [
+    0.7,
+    0.12,
+    0.18
+  ],
+  "compatibleBodyTypes": [
+    "body_phase4_rig_001"
+  ],
+  "compatibleSkeleton": "avatar_skeleton_v1",
+  "tags": [
+    "sample",
+    "phase17",
+    "hat"
+  ],
+  "version": 1
+}

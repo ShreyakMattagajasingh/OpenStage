@@ -1,0 +1,23 @@
+{
+  "id": "hair_phase17_basic_001",
+  "displayName": "Phase 17 Hair",
+  "category": "hair",
+  "model": "avatars/hairs/hair_phase17_basic_001.glb",
+  "thumbnail": "thumbnails/hair_phase17_basic_001.png",
+  "supportsColor": true,
+  "defaultColor": [
+    0.12,
+    0.06,
+    0.03
+  ],
+  "compatibleBodyTypes": [
+    "body_phase4_rig_001"
+  ],
+  "compatibleSkeleton": "avatar_skeleton_v1",
+  "tags": [
+    "sample",
+    "phase17",
+    "hair"
+  ],
+  "version": 1
+}

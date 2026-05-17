@@ -1,0 +1,47 @@
+name: ci
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+
+jobs:
+  qa:
+    name: fmt + clippy + test (windows-latest)
+    runs-on: windows-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Rust toolchain
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          components: clippy, rustfmt
+
+      - name: Cache cargo + target
+        uses: Swatinem/rust-cache@v2
+
+      - name: cargo fmt --check
+        run: cargo fmt --all -- --check
+
+      - name: cargo clippy
+        run: cargo clippy --workspace --all-targets -- -D warnings
+
+      - name: Build binaries (needed by integration tests)
+        run: cargo build --workspace --bins
+
+      - name: cargo test --workspace
+        run: cargo test --workspace
+
+      - name: Upload screenshots + perf
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: agent-screenshots-and-perf
+          path: |
+            user_data/debug_screenshots/*.png
+            user_data/debug_screenshots/*.json
+            user_data/perf/*.json
+            tests/golden/*.png
+            tests/baselines/*.json
+          if-no-files-found: warn

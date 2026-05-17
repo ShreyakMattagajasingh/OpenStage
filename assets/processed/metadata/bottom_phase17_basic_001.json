@@ -1,0 +1,23 @@
+{
+  "id": "bottom_phase17_basic_001",
+  "displayName": "Phase 17 Bottom",
+  "category": "bottom",
+  "model": "avatars/bottoms/bottom_phase17_basic_001.glb",
+  "thumbnail": "thumbnails/bottom_phase17_basic_001.png",
+  "supportsColor": true,
+  "defaultColor": [
+    0.18,
+    0.22,
+    0.32
+  ],
+  "compatibleBodyTypes": [
+    "body_phase4_rig_001"
+  ],
+  "compatibleSkeleton": "avatar_skeleton_v1",
+  "tags": [
+    "sample",
+    "phase17",
+    "bottom"
+  ],
+  "version": 1
+}

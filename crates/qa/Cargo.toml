@@ -1,0 +1,26 @@
+[package]
+name = "qa"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+publish.workspace = true
+
+# QA-only crate: no source, only integration tests under `tests/`. Each
+# *.rs there compiles to its own test binary via `cargo test`.
+
+[dependencies]
+renderer    = { workspace = true }
+avatar      = { workspace = true }
+animation   = { workspace = true }
+assets      = { workspace = true }
+engine_core = { workspace = true }
+glam        = { workspace = true }
+image       = { workspace = true }
+anyhow      = { workspace = true }
+serde_json  = { workspace = true }
+wgpu        = { workspace = true }
+sysinfo     = { workspace = true }
+
+[lib]
+path = "src/lib.rs"

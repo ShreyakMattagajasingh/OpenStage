@@ -1,0 +1,11 @@
+{
+  "id": "body_phase4_rig_001",
+  "displayName": "Phase 4 Rig",
+  "category": "body",
+  "model": "avatars/bodies/phase4_rig.glb",
+  "thumbnail": "thumbnails/body_phase4_rig_001.png",
+  "supportsColor": false,
+  "compatibleSkeleton": "avatar_skeleton_v1",
+  "tags": ["sample", "rigged", "skinned", "phase4", "phase5"],
+  "version": 1
+}

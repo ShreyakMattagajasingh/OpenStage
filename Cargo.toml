@@ -1,0 +1,82 @@
+[workspace]
+resolver = "2"
+members = [
+    "apps/avatar_desktop",
+    "apps/asset_builder",
+    "crates/engine_core",
+    "crates/renderer",
+    "crates/avatar",
+    "crates/commands",
+    "crates/scene",
+    "crates/animation",
+    "crates/assets",
+    "crates/ui",
+    "crates/export",
+    "crates/qa",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+authors = ["Avatar Studio Team"]
+license = "Proprietary"
+publish = false
+rust-version = "1.78"
+
+[workspace.dependencies]
+# --- M1 deps -----------------------------------------------------------------
+wgpu = "22"
+winit = "0.30"
+egui = "0.29"
+egui-wgpu = "0.29"
+egui-winit = "0.29"
+egui_extras = { version = "0.29", features = ["all_loaders"] }
+egui-phosphor = "=0.7.0"
+egui-notify = "=0.17.0"
+pollster = "0.4"
+bytemuck = { version = "1", features = ["derive"] }
+glam = { version = "0.29", features = ["serde", "bytemuck"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+ron = "0.8"
+thiserror = "1"
+anyhow = "1"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter", "fmt"] }
+clap = { version = "4", features = ["derive"] }
+
+# --- Declared now, used in later phases (so versions are pinned workspace-wide).
+# Phase 3+: GLB loading and image processing
+gltf = { version = "1.4", features = ["import"] }
+image = { version = "0.25", default-features = false, features = ["png", "jpeg", "ico", "gif"] }
+# Phase 3+: asset catalog
+rusqlite = { version = "0.32", features = ["bundled"] }
+# Phase 10/11: file dialogs
+rfd = "0.15"
+# Phase 15: platform user-data dir resolver
+dirs = "5"
+# Phase 16: SSIM-based golden-image comparison
+image-compare = "0.4"
+# Phase 16: process memory probe for the soak test
+sysinfo = "0.31"
+
+# --- Internal crates ---------------------------------------------------------
+engine_core = { path = "crates/engine_core" }
+renderer    = { path = "crates/renderer" }
+avatar      = { path = "crates/avatar" }
+commands    = { path = "crates/commands" }
+scene       = { path = "crates/scene" }
+animation   = { path = "crates/animation" }
+assets      = { path = "crates/assets" }
+ui          = { path = "crates/ui" }
+export      = { path = "crates/export" }
+
+[profile.dev]
+opt-level = 1            # shaders/wgpu validation are unbearable at 0
+incremental = true
+
+[profile.release]
+opt-level = 3
+lto = "thin"
+codegen-units = 1
+strip = "debuginfo"

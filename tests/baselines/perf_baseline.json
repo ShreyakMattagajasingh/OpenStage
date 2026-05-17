@@ -1,0 +1,22 @@
+{
+  "capturedAt": "1778938681380",
+  "frameCount": 300,
+  "averageFps": 61.244793,
+  "minFps": 56.33517,
+  "averageFrameMs": 16.327919,
+  "p95FrameMs": 17.2497,
+  "p99FrameMs": 17.5746,
+  "maxFrameMs": 17.7509,
+  "averageGpuMs": 0.30033967,
+  "p95GpuMs": 0.31911457,
+  "maxGpuMs": 0.33078125,
+  "targetFps": 60.0,
+  "targetFrameMs": 16.666666,
+  "passed": true,
+  "windowSize": [
+    1728,
+    918
+  ],
+  "sceneMode": "avatar",
+  "instanceCount": 3
+}

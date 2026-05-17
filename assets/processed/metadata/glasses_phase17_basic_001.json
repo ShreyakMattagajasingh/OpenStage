@@ -1,0 +1,23 @@
+{
+  "id": "glasses_phase17_basic_001",
+  "displayName": "Phase 17 Glasses",
+  "category": "glasses",
+  "model": "avatars/glasses/glasses_phase17_basic_001.glb",
+  "thumbnail": "thumbnails/glasses_phase17_basic_001.png",
+  "supportsColor": true,
+  "defaultColor": [
+    0.05,
+    0.05,
+    0.06
+  ],
+  "compatibleBodyTypes": [
+    "body_phase4_rig_001"
+  ],
+  "compatibleSkeleton": "avatar_skeleton_v1",
+  "tags": [
+    "sample",
+    "phase17",
+    "glasses"
+  ],
+  "version": 1
+}

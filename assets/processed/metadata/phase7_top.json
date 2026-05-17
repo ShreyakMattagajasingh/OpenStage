@@ -1,0 +1,18 @@
+{
+  "category": "top",
+  "compatibleBodyTypes": [
+    "body_phase4_rig_001"
+  ],
+  "compatibleSkeleton": "avatar_skeleton_v1",
+  "displayName": "Phase 7 Top",
+  "id": "top_phase7_basic_001",
+  "model": "avatars/tops/phase7_top.glb",
+  "supportsColor": false,
+  "tags": [
+    "sample",
+    "rigged",
+    "phase7"
+  ],
+  "thumbnail": null,
+  "version": 1
+}

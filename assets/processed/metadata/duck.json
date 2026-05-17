@@ -1,0 +1,11 @@
+{
+  "id": "body_duck_001",
+  "displayName": "Rubber Duck",
+  "category": "body",
+  "model": "avatars/bodies/duck.glb",
+  "thumbnail": "thumbnails/body_duck_001.png",
+  "supportsColor": false,
+  "compatibleSkeleton": null,
+  "tags": ["sample", "non-humanoid"],
+  "version": 1
+}

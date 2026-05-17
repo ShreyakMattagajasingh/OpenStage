@@ -1,0 +1,47 @@
+[package]
+name = "avatar_desktop"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+publish.workspace = true
+
+[[bin]]
+name = "avatar_desktop"
+path = "src/main.rs"
+
+[target.'cfg(windows)'.build-dependencies]
+winresource = "0.1"
+
+# Phase 15: WiX installer settings.
+[package.metadata.wix]
+upgrade-guid = "A03A4F71-3E1E-4D4E-95E0-9C9D2B4A1A7C"
+path-guid    = "B45ED5F0-91B9-4F47-95C2-2D7C1F9B62E2"
+license      = false
+eula         = false
+
+[dependencies]
+engine_core = { workspace = true }
+renderer    = { workspace = true }
+ui          = { workspace = true }
+assets      = { workspace = true }
+animation   = { workspace = true }
+avatar      = { workspace = true }
+export      = { workspace = true }
+commands    = { workspace = true }
+scene       = { workspace = true }
+
+winit              = { workspace = true }
+wgpu               = { workspace = true }
+egui               = { workspace = true }
+egui-wgpu          = { workspace = true }
+egui-winit         = { workspace = true }
+egui_extras        = { workspace = true }
+egui-notify        = { workspace = true }
+glam               = { workspace = true }
+image              = { workspace = true }
+rfd                = { workspace = true }
+anyhow             = { workspace = true }
+serde_json         = { workspace = true }
+tracing            = { workspace = true }
+tracing-subscriber = { workspace = true }

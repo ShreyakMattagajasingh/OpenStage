@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<!--
+  Avatar Studio MSI definition. Per-user install (no admin).
+  Build via `tools/build_installer.ps1`.
+-->
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi"
+     xmlns:util="http://schemas.microsoft.com/wix/UtilExtension">
+    <Product
+        Id="*"
+        Name="Avatar Studio"
+        UpgradeCode="A03A4F71-3E1E-4D4E-95E0-9C9D2B4A1A7C"
+        Manufacturer="Avatar Studio Team"
+        Language="1033"
+        Codepage="1252"
+        Version="$(var.Version)">
+
+        <Package
+            Id="*"
+            Keywords="Avatar Studio Installer"
+            Description="Avatar Studio $(var.Version) Installer"
+            Manufacturer="Avatar Studio Team"
+            InstallerVersion="450"
+            Languages="1033"
+            Compressed="yes"
+            InstallScope="perUser"
+            SummaryCodepage="1252" />
+
+        <MajorUpgrade
+            Schedule="afterInstallInitialize"
+            DowngradeErrorMessage="A newer version of Avatar Studio is already installed." />
+
+        <Media Id="1" Cabinet="media1.cab" EmbedCab="yes" CompressionLevel="high" />
+
+        <Icon Id="ProductIcon.ico" SourceFile="$(var.CargoTargetBinDir)\..\..\assets\icon\avatar_studio.ico" />
+        <Property Id="ARPPRODUCTICON" Value="ProductIcon.ico" />
+        <Property Id="ARPHELPLINK" Value="https://example.invalid/avatar-studio" />
+        <Property Id="MSIINSTALLPERUSER" Value="1" Secure="yes" />
+
+        <!-- Install destination: %LOCALAPPDATA%\Programs\AvatarStudio -->
+        <Directory Id="TARGETDIR" Name="SourceDir">
+            <Directory Id="LocalAppDataFolder">
+                <Directory Id="ProgramsFolder" Name="Programs">
+                    <Directory Id="INSTALLDIR" Name="AvatarStudio">
+                        <Directory Id="AssetsDir" Name="assets">
+                            <Directory Id="ProcessedDir" Name="processed" />
+                            <Directory Id="IconDir" Name="icon" />
+                        </Directory>
+                    </Directory>
+                </Directory>
+            </Directory>
+            <Directory Id="ProgramMenuFolder">
+                <Directory Id="ShortcutFolder" Name="Avatar Studio" />
+            </Directory>
+        </Directory>
+
+        <DirectoryRef Id="INSTALLDIR">
+            <Component Id="AvatarDesktopExe" Guid="6D9A4B0E-1B61-4F2E-A9D2-A1F0F0F1F2F3">
+                <File Id="AvatarDesktopExeFile"
+                      Source="$(var.CargoTargetBinDir)\avatar_desktop.exe"
+                      KeyPath="yes" />
+                <Shortcut Id="StartMenuShortcut"
+                          Directory="ShortcutFolder"
+                          Name="Avatar Studio"
+                          WorkingDirectory="INSTALLDIR"
+                          Icon="ProductIcon.ico"
+                          IconIndex="0"
+                          Advertise="yes" />
+                <RemoveFolder Id="RemoveShortcutFolder"
+                              Directory="ShortcutFolder"
+                              On="uninstall" />
+            </Component>
+            <Component Id="AssetBuilderExe" Guid="7E1A2B3C-4D5E-6F70-8190-A1B2C3D4E5F6">
+                <File Id="AssetBuilderExeFile"
+                      Source="$(var.CargoTargetBinDir)\asset_builder.exe"
+                      KeyPath="yes" />
+            </Component>
+            <Component Id="LicenseFile" Guid="8FA2C5D7-3E4B-4A1C-9D3E-2B7E1C8F9A0B">
+                <File Id="LicenseFileMain"
+                      Source="$(var.CargoTargetBinDir)\..\..\wix\LICENSE.rtf"
+                      KeyPath="yes" />
+            </Component>
+        </DirectoryRef>
+
+        <DirectoryRef Id="IconDir">
+            <Component Id="ProductIconFile" Guid="9CA3D6E1-2F4A-4B5C-8D6E-3F0A1B2C3D4E">
+                <File Id="ProductIconFileMain"
+                      Source="$(var.CargoTargetBinDir)\..\..\assets\icon\avatar_studio.ico"
+                      KeyPath="yes" />
+            </Component>
+        </DirectoryRef>
+
+        <Feature Id="Main" Title="Avatar Studio" Level="1" Display="expand"
+                 ConfigurableDirectory="INSTALLDIR">
+            <ComponentRef Id="AvatarDesktopExe" />
+            <ComponentRef Id="AssetBuilderExe" />
+            <ComponentRef Id="LicenseFile" />
+            <ComponentRef Id="ProductIconFile" />
+            <!-- assets/processed/ harvested at build time -->
+            <ComponentGroupRef Id="HarvestedAssets" />
+        </Feature>
+
+        <UI>
+            <UIRef Id="WixUI_Minimal" />
+        </UI>
+        <WixVariable Id="WixUILicenseRtf"
+                     Value="$(var.CargoTargetBinDir)\..\..\wix\LICENSE.rtf" />
+    </Product>
+</Wix>

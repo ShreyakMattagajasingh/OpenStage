@@ -1,0 +1,22 @@
+[package]
+name = "renderer"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+publish.workspace = true
+
+[dependencies]
+engine_core = { workspace = true }
+animation   = { workspace = true }
+
+wgpu     = { workspace = true }
+winit    = { workspace = true }
+pollster = { workspace = true }
+bytemuck = { workspace = true }
+glam     = { workspace = true }
+tracing  = { workspace = true }
+anyhow   = { workspace = true }
+gltf     = { workspace = true }
+image    = { workspace = true }
+image-compare = { workspace = true }
